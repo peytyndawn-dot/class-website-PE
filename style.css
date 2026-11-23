@@ -1,0 +1,32 @@
+
+header {
+    background-color: #849878;
+    height: 20%;
+    padding: 20px;
+}
+
+nav {
+    background-color: #52694F;
+    width: 20%;
+    min-height: 250px;
+    float: left;
+    color: white;
+    padding: 15px;
+}
+
+main {
+    background-color: #F5F1E6;
+    min-height: 300px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #C9D2BE;
+    clear: both;
+    height: 15%;
+    padding: 15px;
+}
+
+header h1 {
+    color: #263D2A;
+}

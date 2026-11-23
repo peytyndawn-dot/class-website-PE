@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        form ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        form li {
+            margin-top: 1em;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form textarea {
+            font: 1em sans-serif;
+            box-sizing: border-box;
+            max-width: 100%;
+            border: 1px solid #999;
+            padding: 5px;
+        }
+
+        form textarea {
+            height: 5em;
+        }
+
+        form input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        form .radio-option {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* Green border for a valid phone number */
+        input[type="tel"]:valid {
+            border: 3px solid green;
+        }
+
+        input[type="tel"]:invalid {
+            border: 3px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Peytyn Elkins</h2>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="timer.html">Countdown Timer</a>
+        <a href="form-basics.html">Contact Form</a>
+    </nav>
+
+    <main>
+        <h2>Contact Form</h2>
+
+        <form method="post">
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name">
+                </li>
+
+                <li>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="user_mail">
+                </li>
+
+                <li>
+                    <label for="phone">Telephone:</label>
+                    <input type="tel" id="phone" name="user_phone"
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                           placeholder="505-224-3000"
+                           title="Enter a phone number like 505-224-3000"
+                           required>
+                </li>
+
+                <li>
+                    <p>Preferred Contact Method:</p>
+
+                    <label class="radio-option">
+                        <input type="radio" name="contact_method"
+                               value="text">
+                        Text
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="contact_method"
+                               value="phone">
+                        Phone
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="contact_method"
+                               value="email">
+                        Email
+                    </label>
+                </li>
+
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
+
+                <li class="button">
+                    <button type="submit">Send your message</button>
+                </li>
+            </ul>
+        </form>
+    </main>
+
+    <footer>
+        <p>My Class Website</p>
+    </footer>
+</body>
+</html>
